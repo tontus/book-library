@@ -49,7 +49,7 @@ router.route('/update/:id').post((req, res) => {
             book.link = req.body.link;
 
             book.save()
-                .then(() => res.json('Book updated'))
+                .then(() => res.json('Book information updated'))
                 .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));
